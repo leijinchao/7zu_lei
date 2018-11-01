@@ -1,0 +1,199 @@
+@import "_minix.scss";
+@import "common.scss";
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    flex-direction: column;
+    header {
+        width: 100%;
+        height: pxTorem(80px);
+        .title {
+            width: 100%;
+            @include height(pxTorem(40px));
+            line-height: pxTorem(40px);
+            font-size: pxTorem(16px);
+            text-align: center;
+            line-height: pxTorem(40px);
+            color: red;
+        }
+        .wrapper {
+            width: 100%;
+            height: pxTorem(40px);
+            overflow: hidden;
+            ul {
+                @include box_flex;
+                position: absolute;
+                li {
+                    width: pxTorem(60px);
+                    font-size: pxTorem(14px);
+                    height: pxTorem(40px);
+                    text-align: center;
+                    line-height: pxTorem(40px);
+                    flex-shrink: 0;
+                }
+                li.active {
+                    color: red;
+                    position: relative;
+                    &::after {
+                        content: "";
+                        width: pxTorem(30px);
+                        height: pxTorem(1px);
+                        background: red;
+                        position: absolute;
+                        bottom: pxTorem(5px);
+                        left: pxTorem(15px);
+                    }
+                }
+            }
+        }
+    }
+    section {
+        flex-grow: 1;
+        overflow: hidden;
+        position: relative;
+        .scrollItem {
+            width: 100%;
+            position: absolute;
+            .swiperItem {
+                width: 100%;
+                height: pxTorem(44px);
+                @include box_flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 pxTorem(10px);
+                box-sizing: border-box;
+                .SItem {
+                    font-size: pxTorem(16px);
+                }
+            }
+            .swiper-container {
+                width: 100%;
+                .swiper-wrapper {
+                    width: 100%;
+                    .swiper-slide {
+                        width: 100%;
+                        dl {
+                            width: 100%;
+                            height: pxTorem(140px);
+                            @include box_flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            dt {
+                                width: 100%;
+                                img {
+                                    width: 100%;
+                                    padding: 0 pxTorem(25px);
+                                    box-sizing: border-box;
+                                }
+                            }
+                            dd {
+                                width: 100%;
+                                p {
+                                    width: 100%;
+                                    text-align: center;
+                                    line-height: pxTorem(20px);
+                                    font-size: pxTorem(14px);
+                                }
+                                .month {
+                                    width: 100%;
+                                    height: pxTorem(20px);
+                                    line-height: pxTorem(20px);
+                                    font-size: pxTorem(14px);
+                                    text-align: center;
+                                    color: red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .ban {
+                width: 100%;
+                .ban-item {
+                    width: 100%;
+                    height: pxTorem(40px);
+                    line-height: pxTorem(40px);
+                    text-align: center;
+                    background: #F6F4F5;
+                    color: #666;
+                }
+                .ban-box {
+                    width: 100%;
+                    background: #F6F4F5;
+                    @include box_flex;
+                    flex-wrap: wrap;
+                    dl {
+                        width: 48%;
+                        background: #fff;
+                        margin: 1%;
+                        box-sizing: border-box;
+                        dt {
+                            width: 100%;
+                            img {
+                                width: 100%;
+                                padding: pxTorem(10px);
+                                box-sizing: border-box;
+                            }
+                        }
+                        dd {
+                            width: 100%;
+                            p {
+                                width: 100%;
+                                height: pxTorem(30px);
+                                line-height: pxTorem(30px);
+                                font-size: pxTorem(14px);
+                                color: #666;
+                            }
+                            .bans-item,
+                            .ban-month {
+                                width: 100%;
+                                height: pxTorem(15px);
+                                line-height: pxTorem(15px);
+                                @include box_flex;
+                                justify-content: space-between;
+                                .month {
+                                    color: red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        width: 100%;
+        height: pxTorem(44px);
+        background: #fff;
+        @include box_flex;
+        justify-content: space-between;
+        padding: 0 pxTorem(10px);
+        box-sizing: border-box;
+        border-top: 1px solid #ccc;
+        dl {
+            @include box_flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            dt {
+                i {
+                    font-size: pxTorem(16px);
+                }
+            }
+        }
+    }
+}
+
+.swiper-pagination-bullet {
+    width: pxTorem(10px)!important;
+    height: pxTorem(10px)!important;
+    margin: 0 pxTorem(5px)!important;
+}

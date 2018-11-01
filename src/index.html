@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/index.min.css">
+    <link rel="stylesheet" href="styles/swiper.min.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <script src="js/flexible.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <header>
+            <p class="title">全程包邮 低至五元</p>
+            <div class="wrapper">
+                <ul>
+                    <li class="active">推荐</li>
+                    <li>女装</li>
+                    <li>美食</li>
+                    <li>居家</li>
+                    <li>美妆个护</li>
+                    <li>男装</li>
+                    <li>内衣</li>
+                    <li>鞋子</li>
+                </ul>
+            </div>
+        </header>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/better-scroll.js"></script>
+    <script>
+        var myBscroll = new BScroll(".wrapper", {
+            scrollX: true,
+            click: true,
+        })
+    </script>
+</body>
+
+</html>
